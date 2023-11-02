@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       var response = await Dio()
           .get('http://10.0.2.2:8080/api/v1/employees');
       if (response.statusCode == 200) {
-        print("success");
+        print(response.data.toString());
       } else {
         print(response.statusCode);
       }
